@@ -1,9 +1,9 @@
-import {createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider} from "react-router-dom"
+import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import { AppLayout } from "./Ui/AppLayout";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-import { AppLayout } from "./UI/AppLayout";
-
+import { Services } from "./pages/Services";
 export const App=()=>{
     const router=createBrowserRouter([
         {
@@ -17,17 +17,30 @@ export const App=()=>{
                 {
                     path:"/about",
                     element:<About/>,
+
                 },
                 {
                     path:"/contact",
                     element:<Contact/>,
                 },
+                {
+                    path:"/services",
+                    element:<Services/>,
+                },
 
-            ]
+
+            ],
         },
-        
     ]);
-
-
+    return <RouterProvider router={router}/>
 }
+
+
+
+
+
+
+
+
+
 
